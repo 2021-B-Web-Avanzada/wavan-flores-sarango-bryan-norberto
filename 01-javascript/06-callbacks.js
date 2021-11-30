@@ -8,7 +8,7 @@ fs.readFile(
     'utf-8',
     (error,contenido)=>{
             if(error){
-                    console.error({mensaje:'Error leyendo contenido',error:error});
+                    console.error({mensaje:'Error leyendo contenido 06 ejemplo txt',error:error});
             }
             else
             {
@@ -19,7 +19,7 @@ fs.readFile(
                     'utf-8',
                     (error,contenido)=>{
                         if(error){
-                            console.error({mensaje:'Error leyendo contenido',error:error});
+                            console.error({mensaje:'Error leyendo contenido 01 variable',error:error});
                         }
                         else
                         {
