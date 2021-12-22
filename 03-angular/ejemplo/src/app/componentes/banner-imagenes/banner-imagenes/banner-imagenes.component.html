@@ -1,0 +1,22 @@
+<h2>Hola desde Banner</h2>
+<!-- interpolación> texto muestra interfaaz-->
+<h2>{{nombre}}-{{apellido}}</h2>
+<p>Mascota:{{mascotas.cachetes.edad}}</p>
+
+<!--Property binding[]-->
+<img [src]="utlImagen" alt="">
+<a [href]="url">Mas información</a>
+
+<!--Event binding[]-->
+<button (click)="ejecutarEventoClic()"
+        (blur)="ejecutarEventoBlur()">
+  Event Binding</button>
+
+<!--Pipes-->
+<!--Recibe algo y transforma-->
+<p>{{fecha | date: 'dd-MM-YYYY'}}</p>
+<p>{{sueldo | currency}}</p>
+
+<pre>
+  {{mascotas | json}}
+</pre>

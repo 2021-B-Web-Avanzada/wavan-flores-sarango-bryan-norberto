@@ -1,1 +1,9 @@
+<app-banner-imagenes></app-banner-imagenes>
 <p>ruta-login works!</p>
+<button (click)="cambiarOcultarBanner()">
+  <!--{condicion) ? verdadero:false-->
+  {{(mostrarSegundoBanner) ? 'Ocultar':'Mostrar }}
+</button>
+<app-banner-imagenes *ngIf="mostrarSegundoBanner">
+  <!--DIRECTIVA: NG IF > IF -->
+</app-banner-imagenes>
