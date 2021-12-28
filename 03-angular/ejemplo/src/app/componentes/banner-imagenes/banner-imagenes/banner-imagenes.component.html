@@ -1,10 +1,13 @@
-<h2>Hola desde Banner</h2>
+<h1 [ngStyle]="{
+'background-color':'#000',
+'color':color,
+'border':'solid 1px'+color}" >Hola desde Banner</h1>
 <!-- interpolación> texto muestra interfaaz-->
 <h2>{{nombre}}-{{apellido}}</h2>
 <p>Mascota:{{mascotas.cachetes.edad}}</p>
 
 <!--Property binding[]-->
-<img [src]="utlImagen" alt="">
+<img [src]="urlImagen" alt="">
 <a [href]="url">Mas información</a>
 
 <!--Event binding[]-->

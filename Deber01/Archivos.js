@@ -231,6 +231,8 @@ class Archivos{
                 }
             )
     }
+
+    //PROBADA
     leerConsola(){
         console.log('Estoy leyendo');
         const promesaLeerConsola = new Promise(
@@ -291,7 +293,6 @@ class Archivos{
         )
         return promesaLeerConsola;
     }
-
 
 }
 
