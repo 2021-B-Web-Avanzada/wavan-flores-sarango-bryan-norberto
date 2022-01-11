@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RutaForbiddenComponent } from './rutas/ruta-forbidden/ruta-forbidden.component';
@@ -32,7 +32,8 @@ import { BannerImagenesModule } from './componentes/banner-imagenes/banner-image
     // Módulos
     BrowserModule,
     AppRoutingModule,
-    BannerImagenesModule
+    BannerImagenesModule,
+    HttpClientModule
   ],
   providers: [
     //Servicios
