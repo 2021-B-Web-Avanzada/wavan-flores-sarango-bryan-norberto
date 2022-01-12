@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/Forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +34,8 @@ import { BannerImagenesModule } from './componentes/banner-imagenes/banner-image
     BrowserModule,
     AppRoutingModule,
     BannerImagenesModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     //Servicios
