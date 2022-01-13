@@ -15,6 +15,7 @@ import { AuthService } from './servicios/auth/auth.service';
 import { EstaLogeadoGuard } from './servicios/auth/esta-logeado.guard';
 import { EsAdministradorGuard } from './servicios/auth/es-administrador.guard';
 import { BannerImagenesModule } from './componentes/banner-imagenes/banner-imagenes.module';
+import { RutaUsuarioPerfilComponent } from './rutas/ruta-usuario-perfil/ruta-usuario-perfil.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { BannerImagenesModule } from './componentes/banner-imagenes/banner-image
     RutaInicioComponent,
     RutaUsuarioComponent,
     RutaPostComponent,
-    RutaAppComponent
+    RutaAppComponent,
+    RutaUsuarioPerfilComponent
   ],
   imports: [
     // Módulos

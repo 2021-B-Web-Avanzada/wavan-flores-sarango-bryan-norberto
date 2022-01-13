@@ -6,7 +6,7 @@ import { environment } from 'src/environments/environment';
 import { UserJphInterface } from './interfaces/user-jph.interface';
 
 @Injectable({
-  providedIn: 'any'
+  providedIn: 'root'
 })
 export class UserJphService {
 
@@ -14,33 +14,34 @@ export class UserJphService {
     private readonly httpClient: HttpClient
   ) {}
 
-  buscarTodos(parametrosConsulta?:any): Observable<UserJphInterface[]> {
-    const url = environment.urlJPC +'/users';
-      Object
-        .keys(parametrosConsulta)
-        .forEach(k=>{
-          if(parametrosConsulta[k]){
+  buscarTodos(parametrosConsulta?: any): Observable<UserJphInterface[]> {
+    const url = environment.urlJPC + '/users';
+    Object
+      .keys(parametrosConsulta)
+      .forEach(k => {
+          if (!parametrosConsulta[k]) {
             delete parametrosConsulta[k]
           }
-        })
-      return this.httpClient.get(url,
-        {
-          params: parametrosConsulta,
-        })
-        .pipe(
-          map(
-              (resultadoEnData)=>resultadoEnData as UserJphInterface[]
-          )
-         );
-  }
-
-  buscarUno(idUsuario:number) {
-    const url = environment.urlJPC +'/users/'+idUsuario;
-    return this.httpClient.get(url)
+        }
+      )
+    return this.httpClient
+      .get(url, { params: parametrosConsulta, })
       .pipe(
         map(
-        (resultadoEnData)=>resultadoEnData as UserJphInterface)
-  );
+          (resultadoEnData) => resultadoEnData as UserJphInterface[]
+        )
+      );
+  }
+
+  buscarUno(idUsuario: number): Observable<UserJphInterface[]> {
+    const url = environment.urlJPC + '/users' + idUsuario;
+    return this.httpClient
+      .get(url)
+      .pipe(
+        map(
+          (resultadoEnData) => resultadoEnData as UserJphInterface[]
+        )
+      );
   }
 }
 

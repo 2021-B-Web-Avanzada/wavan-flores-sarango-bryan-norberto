@@ -16,37 +16,60 @@ arreglo: UserJphInterface[] = [];
     private readonly router: Router,
     private readonly activatedRoute: ActivatedRoute
   ) { }
-  ngOnInit(): void {
 
-    this.activatedRoute.queryParams
-      .subscribe(
-        (queryParams)=>{
-        this.buscarUsuario =queryParams['name']
-          this.buscarUsuarios();
-        })
+  ngOnInit(): void {
+    const parametrosConsulta$ = this.activatedRoute
+      .queryParams;
+
+    parametrosConsulta$
+      .subscribe (
+        {
+          next:(queryParams) =>{
+            console.log(queryParams);
+            this.buscarUsuario =queryParams['name'];
+            this.buscarUsuarios();
+          },
+          error:() =>{
+
+          },
+          complete: () =>{
+
+          }
+        }
+      );
+
+    /*
+    this.router.navigate(['/app','usuario'], {queryParams:{
+      name:'asdasd'
+    }})
+    this.buscarUsuarios();
+    */
+  }
+
+  actualizarParametrosDeConsulta(){
+    this.router
+      .navigate(['/app','usuario'],{
+        queryParams:{
+          name:this.buscarUsuario
+        }
+      })
   }
 
 
-  //   this.router.navigate(['/app','usuario'],{queryParams:{
-  //     name:'asdasd'
-  //     }})
-  //   this.buscarUsuarios()
-  // }
-
-  buscarUsuarios(){
+  buscarUsuarios() {
     this.userJphService
       .buscarTodos({
-        name:this.buscarUsuario
+        name: this.buscarUsuario
       })
-      .subscribe(
-        {
-          next:(datos)=>{
+
+      .subscribe({
+          next: (datos) => {
             this.arreglo = datos;
             this.buscarUsuario = '';
           },
-          error: (error)=>{
-            console.error({error})
-          },
+          error: (error) => {
+            console.log({ error });
+          }
         }
       )
   }
