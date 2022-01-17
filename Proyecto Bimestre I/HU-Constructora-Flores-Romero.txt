@@ -1,0 +1,11 @@
+Proyecto Aplicaciones Web Avanzadas
+Historias de Usuario
+Integrantes:
+Bryan Flores
+Juan Romero
+
+Descripción:
+Las historias de usuario fueron escritas en la herramienta TRELLO.
+
+Link:
+https://trello.com/b/5228hzNP/constructora

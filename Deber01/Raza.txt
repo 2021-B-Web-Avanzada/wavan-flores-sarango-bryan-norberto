@@ -1,2 +1,6 @@
-1 CollieSmoth  Scotland true 53 18
-2 Pastor alemania true 50 40
+3 Dandie Ecuador false 40 20
+2 Pastor Alemania true 50 40
+3 Alusky Siberia true 40 20
+4 Pinscher Austria true 20 20
+5 Mastin España true 40 50
+6 Alano Espa�a true 50 40

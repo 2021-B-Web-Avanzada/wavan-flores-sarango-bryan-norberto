@@ -1,0 +1,11 @@
+Proyecto Aplicaciones Web Avanzadas
+MockUps
+Integrantes:
+Bryan Flores
+Juan Romero
+
+Descripción:
+Los MockUps fueron realizados en la herramienta FIGMA.
+
+Link:
+https://www.figma.com/file/Wk4xyYQ47aWMWsnBp4VeXk/Mockups-Constructora?node-id=0%3A1
