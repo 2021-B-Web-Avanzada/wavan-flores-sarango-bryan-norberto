@@ -1,0 +1,11 @@
+Proyecto Aplicaciones Web Avanzadas
+Base de Datos
+Integrantes:
+Bryan Flores
+Juan Romero
+
+Descripción:
+El modelo entidad relación fue desarrollado en la herramiento Power Designer
+
+Link:
+https://epnecuador-my.sharepoint.com/:b:/g/personal/bryan_flores04_epn_edu_ec/ERfjzcjsHnNHlSPd4MGGFsoBIdfW1vGPVnXW85q4N0ZMyA?e=19jNFM
