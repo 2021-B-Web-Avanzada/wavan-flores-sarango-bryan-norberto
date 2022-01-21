@@ -16,8 +16,7 @@ import { EstaLogeadoGuard } from './servicios/auth/esta-logeado.guard';
 import { EsAdministradorGuard } from './servicios/auth/es-administrador.guard';
 import { BannerImagenesModule } from './componentes/banner-imagenes/banner-imagenes.module';
 import { RutaUsuarioPerfilComponent } from './rutas/ruta-usuario-perfil/ruta-usuario-perfil.component';
-
-
+import { ReactiveFormsModule } from '@angular/Forms';
 @NgModule({
   declarations: [
     // Componentes
@@ -37,7 +36,8 @@ import { RutaUsuarioPerfilComponent } from './rutas/ruta-usuario-perfil/ruta-usu
     AppRoutingModule,
     BannerImagenesModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     //Servicios
