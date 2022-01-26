@@ -1,52 +1,64 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/Forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RutaForbiddenComponent } from './rutas/ruta-forbidden/ruta-forbidden.component';
 import { RutaLoginComponent } from './rutas/ruta-login/ruta-login.component';
 import { RutaNotFoundComponent } from './rutas/ruta-not-found/ruta-not-found.component';
+import { RutaForbiddenComponent } from './rutas/ruta-forbidden/ruta-forbidden.component';
 import { RutaInicioComponent } from './rutas/ruta-inicio/ruta-inicio.component';
 import { RutaUsuarioComponent } from './rutas/ruta-usuario/ruta-usuario.component';
 import { RutaPostComponent } from './rutas/ruta-post/ruta-post.component';
 import { RutaAppComponent } from './rutas/ruta-app/ruta-app.component';
-import { AuthService } from './servicios/auth/auth.service';
-import { EstaLogeadoGuard } from './servicios/auth/esta-logeado.guard';
-import { EsAdministradorGuard } from './servicios/auth/es-administrador.guard';
-import { BannerImagenesModule } from './componentes/banner-imagenes/banner-imagenes.module';
+import {AuthService} from './servicios/auth/auth.service';
+import {EstaLogeadoGuard} from './servicios/auth/esta-logeado.guard';
+import {EsAdministradorGuard} from './servicios/auth/es-administrador.guard';
+import {BannerImagenesModule} from './componentes/banner-imagenes/banner-imagenes.module';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RutaUsuarioPerfilComponent } from './rutas/ruta-usuario-perfil/ruta-usuario-perfil.component';
-import { ReactiveFormsModule } from '@angular/Forms';
+import {InputSwitchModule} from 'primeng/inputswitch';
+import {KnobModule} from 'primeng/knob';
+import {SplitButtonModule} from 'primeng/splitbutton';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
+  // Componentes
   declarations: [
-    // Componentes
     AppComponent,
     RutaLoginComponent,
-    RutaForbiddenComponent,
     RutaNotFoundComponent,
+    RutaForbiddenComponent,
     RutaInicioComponent,
     RutaUsuarioComponent,
     RutaPostComponent,
     RutaAppComponent,
     RutaUsuarioPerfilComponent
   ],
+  // Modulos Importados
   imports: [
-    // Módulos
+    // app.module.ts
     BrowserModule,
     AppRoutingModule,
     BannerImagenesModule,
     HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule, // Template Driven Forms
+    ReactiveFormsModule,
+    InputSwitchModule,
+    KnobModule,
+    SplitButtonModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
+  // Servicios
   providers: [
-    //Servicios
-    AuthService,
+    // AuthService,
     EstaLogeadoGuard,
     EsAdministradorGuard
   ],
+  // Componente principal (aqui es donde empieza toodo)
   bootstrap: [
-    // Componente principal
-    AppComponent]
+    AppComponent
+  ]
 })
 export class AppModule { }

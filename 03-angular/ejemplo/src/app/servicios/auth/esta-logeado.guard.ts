@@ -1,24 +1,25 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
+import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import {Observable} from 'rxjs';
+import {AuthService} from './auth.service';
 
 @Injectable()
-export class EstaLogeadoGuard implements CanActivate{
+export class EstaLogeadoGuard implements CanActivate {
 
-// Inyección de Dependencias
+  // Inyeccion de dependencias
   constructor(
-    private readonly _authService:AuthService,
-    private readonly _router: Router
+    private readonly _authService: AuthService,
+    private readonly _router: Router,
   ) {
   }
+
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable <boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    // Si no esta logeado, el usuario es redirigido a la página prohibida
-  if (!this._authService.estaLogeado){
-    this._router.navigate(['/forbidden'])
+    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    if (!this._authService.estaLogeado) {
+      this._router.navigate(['/forbidden'])
+    }
+    return this._authService.estaLogeado; // boolean
   }
-      return this._authService.estaLogeado;
-  }
+
 }
