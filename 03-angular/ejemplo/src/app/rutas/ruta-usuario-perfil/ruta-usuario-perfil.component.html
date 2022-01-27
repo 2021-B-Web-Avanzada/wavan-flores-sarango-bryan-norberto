@@ -2,9 +2,22 @@
   <p>{{usuarioActual.name}}</p>
 </div>
 
+<div class="btn-group btn-group-toggle">
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.left"> Left (pre-checked)
+  </label>
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.middle"> Middle
+  </label>
+  <label class="btn-primary" ngbButtonLabel>
+    <input type="checkbox" ngbButton [(ngModel)]="model.right"> Right
+  </label>
+</div>
+
+
 <p-knob [(ngModel)]="valorKnob" [min]="0" [max]="100"></p-knob>
 <p-splitButton label="Save" icon="pi pi-check"
-               (onClick)="guardar()"
+               (onClick)="abrirDialogo()"
                [model]="items"></p-splitButton>
 <button id="basic" type="button"
         color="accent"
@@ -123,3 +136,4 @@
     </div>
   </form>
 </div>
+
