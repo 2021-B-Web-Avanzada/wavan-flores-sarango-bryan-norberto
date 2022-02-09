@@ -4,7 +4,6 @@ import { Server, Socket } from 'socket.io';
     cors:{
         origin: '*',
     },
-    namespace : 'events'
 })
 
 export class EventosGateway{
@@ -15,9 +14,14 @@ export class EventosGateway{
         @ConnectedSocket()
         socket: Socket
     ){
-        return{
-            message,
-            saludo :'Hola'
-        }
+        socket.broadcast
+            .emit(
+                'escucharEventoHola',
+                {
+                    mensaje:'Bienvenido Bryan'
+                }
+            );
+        console.log(socket.id)
+        return 'ok';
     }
 }
