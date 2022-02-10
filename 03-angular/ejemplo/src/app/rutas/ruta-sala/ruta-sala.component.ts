@@ -25,6 +25,14 @@ arregloMensajes:{
     console.log('Contructor')
   }
   enviarMensaje(){
+    this.arregloMensajes.push(
+      {
+        mensaje: this.mensaje,
+        salaId: +this.salaId,
+        nombre: this.nombre,
+        posicion: 'izq'
+      }
+    )
     this.websocketService.ejecutarEventoEnviarMensaje(
       +this.salaId,this.nombre,this.mensaje
     );
@@ -45,7 +53,6 @@ arregloMensajes:{
           }
         }
       )
-
   }
   logicaSalas(salaId:string,nombre:string){
     this.desSubscribirse();
@@ -63,7 +70,7 @@ arregloMensajes:{
                 nombre: data.nombre,
                 posicion: data.nombre === this.nombre ? 'izq' : 'der'
               }
-            )
+            );
           },
           error:(error)=>{
             console.error({error});
