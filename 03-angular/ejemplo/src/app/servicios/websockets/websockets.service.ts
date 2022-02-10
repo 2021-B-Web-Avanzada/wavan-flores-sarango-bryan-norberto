@@ -9,10 +9,50 @@ import {Observable} from 'rxjs';
 export class websocketsService{
   constructor(private socket: Socket) {
   }
-  ejecutarEventoHola(): Observable<any>{
-    return this.socket.emit('Hola', {
-      nombre: 'Adrian'
-    });
+  ejecutarEventoHola() {
+    //Emitimos un evento
+    const resp = this.socket
+      .emit(
+        'Hola', {
+          nombre: 'Adrian'
+        }
+      );
+    console.log(resp);
+  }
+
+  escucharEventoHola(){
+    return this.socket
+      .fromEvent('escucharEventoHola');
 
   }
+
+  ejecutarEventoUniserSala(salaId:number, nombre: string) {
+    //Emitimos un evento
+    this.socket.emit(
+      'unirseSala',{
+        nombre,
+        salaId
+      }
+    );
+  }
+    escucharEventoUnirseSala(){
+      return this.socket.fromEvent('escucharEventoUnirseSala')
+    }
+
+  ejecutarEventoEnviarMensaje(salaId:number, nombre: string, mensaje:string) {
+    //Emitimos un evento
+    this.socket.emit(
+      'unirseSala',{
+        nombre,
+        salaId,
+        mensaje
+      }
+    );
+  }
+  escucharEventoEnviarMensajeSala(){
+    return this.socket.fromEvent('escucharEventoEnviarMensajeSala')
+  }
+
+
+
 }
