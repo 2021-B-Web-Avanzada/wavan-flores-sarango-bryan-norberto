@@ -1,5 +1,4 @@
-export interface ResponseInterface{
+export interface ResponseInterface {
   status:string;
-  response:string;
-
+  result:any;
 }

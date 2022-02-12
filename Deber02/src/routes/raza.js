@@ -10,6 +10,19 @@ router.get('/',(req,res)=>{
     res.json(razas);
 });
 
+
+//LEER por cada uno
+router.get('/:idParent',(req,res)=>{
+    const idParent=parseInt(req.params['idParent']);
+
+    for(let i=0;i<razas.length;i++){
+        if(razas[i].id==idParent){
+           res.json(razas[i])
+            break;
+        }
+    }
+});
+
 //INSERTAR
 router.post('/',(req,res)=>{
     //const {idParent}=req.params;
@@ -29,7 +42,7 @@ router.post('/',(req,res)=>{
         razas.push(newRaza);
         const json_mascota= JSON.stringify(razas);
         fs.writeFileSync('src/datos.json',json_mascota,'utf-8');
-        res.json(razas);
+        res.send("Insertado")
     }else{
         res.status(400).json({error:'Las entradas no pueden estar vacias'});
     }
@@ -46,7 +59,7 @@ router.delete('/:idParent',(req,res)=>{
             razas=razas.filter(raza=>raza.id!=idParent);
             const json_mascota= JSON.stringify(razas);
             fs.writeFileSync('src/datos.json',json_mascota,'utf-8');
-            res.send('borrado');
+            res.send('Eliminado');
             break;
         }
     }
@@ -74,10 +87,12 @@ router.put('/:idParent',(req,res)=>{
                 razas[i]=updateRaza;
                 const json_raza= JSON.stringify(razas);
                 fs.writeFileSync('src/datos.json',json_raza,'utf-8');
+
                 res.send('Actualizado');
             }
 
         }
+
     }
 
 });

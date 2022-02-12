@@ -10,6 +10,24 @@ router.get('/',(req,res)=>{
     res.json(mascotas);
 });
 
+//LEER por cada uno
+router.get('/:idParent&:idChildren',(req,res)=>{
+    const idParent=parseInt(req.params['idParent']);
+    const idChildren=parseInt(req.params['idChildren']);
+
+    for(let i=0;i<mascotas.length;i++) {
+        if (mascotas[i].id == idParent) {
+            for (let j = 0; j < mascotas[i]["children"].length; j++) {
+                if (mascotas[i].children[j].idChildren == idChildren) {
+                    res.json(mascotas[i].children[j]);
+                    break;
+                }
+            }
+        }
+    }
+});
+
+
 //INSERTAR
 router.post('/:idParent',(req,res)=>{
     const {idParent}=req.params;
@@ -54,7 +72,7 @@ router.delete('/:idParent&:idChildren',(req,res)=>{
                     mascotas[i].children=mascotas[i].children.filter(mascota=>mascota.idChildren!=idChildren);
                     const json_mascota= JSON.stringify(mascotas);
                     fs.writeFileSync('src/datos.json',json_mascota,'utf-8');
-                    res.send('borrado');
+                    res.send();
                 }
             }
         }

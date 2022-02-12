@@ -7,10 +7,12 @@ import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.componen
 import { EditarComponent } from './pantallas/editar/editar.component';
 import { CrearComponent } from './pantallas/crear/crear.component';
 import { LeerComponent } from './pantallas/leer/leer.component';
-import { DashboardComponent } from './pantallas/dashboard/dashboard.component';
 import { NoEncontradaComponent } from './pantallas/no-encontrada/no-encontrada.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {HttpClientModule} from '@angular/common/http'
+import {FormGroup,FormControl,Validators,ReactiveFormsModule} from '@angular/forms'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import {HttpClientModule} from '@angular/common/http'
     EditarComponent,
     CrearComponent,
     LeerComponent,
-    DashboardComponent,
-    NoEncontradaComponent
+    NoEncontradaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
