@@ -34,7 +34,7 @@ export class CrearComponent implements OnInit {
           var respuesta=error;
           console.log(respuesta.status);
           if(respuesta.status==200){
-            this.alerta.mostrarSuccess("Datos modificados", "Realizado");
+            this.alerta.mostrarSuccess("Raza creada", "Realizado");
             this.router.navigate(['leer']);
           }
           else{

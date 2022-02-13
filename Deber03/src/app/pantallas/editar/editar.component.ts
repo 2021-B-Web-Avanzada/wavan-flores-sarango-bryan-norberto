@@ -27,7 +27,7 @@ export class EditarComponent implements OnInit {
   });
   ngOnInit(): void {
     var razaid = this.activerouter.snapshot.paramMap.get('id');
-    console.log(razaid);
+
     this.api.getUnaRaza(razaid)
       .subscribe(data=>{
         this.datosRaza = data;

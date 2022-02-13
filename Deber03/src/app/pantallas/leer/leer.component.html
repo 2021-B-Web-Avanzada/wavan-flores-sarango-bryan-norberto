@@ -1,5 +1,5 @@
 <app-cabecera></app-cabecera>
-<div cl>
+<div>
   <h3 class="text-center">Raza de Animales</h3>
   <table class="table table-hover">
     <thead>
@@ -25,5 +25,35 @@
   </table>
   <button type="button" class="float-sm-end  btn btn-primary btn-lg btn-block" (click)="nuevaRaza()">Nueva Raza</button>
 </div>
+
+<div>
+  <h3 class="text-center">Mascotas</h3>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">ID de Raza</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Número de Vacunas</th>
+      <th scope="col">Dueño</th>
+      <th scope="col">Residencia del dueño</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let mascota of mascotas" (click)="editarMascota(mascota.idChildren, mascota.idPadre)">
+      <th scope="row">{{mascota.idChildren}}</th>
+      <td>{{mascota.idPadre}}</td>
+      <td>{{mascota.nombreChildren}}</td>
+      <td>{{mascota.edad}}</td>
+      <td>{{mascota.numeroVacunas}}</td>
+      <td>{{mascota.dueno}}</td>
+      <td>{{mascota.residenciaDueno}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="float-sm-end  btn btn-primary btn-lg btn-block" (click)="nuevaMascota()">Nueva Mascota</button>
+</div>
+
 
 <app-pie-pagina></app-pie-pagina>

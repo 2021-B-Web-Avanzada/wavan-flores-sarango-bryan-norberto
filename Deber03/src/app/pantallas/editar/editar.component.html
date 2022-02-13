@@ -32,8 +32,12 @@
       <label for="txtpeso">Peso</label>
       <input type="number" class="form-control" id="txtpeso" placeholder="Peso" formControlName="peso">
     </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <button type="button" class="btn btn-danger" (click)="eliminarRaza()">Eliminar</button>
+    <br><br>
+    <div class="m-0 row justify-content-around">
+      <button type="submit" class="btn btn-primary col-sm-2 border">Guardar</button>
+      <button type="button" class="btn btn-danger col-sm-2 border" (click)="eliminarRaza()">Eliminar</button>
+    </div>
+
   </form>
 
 </div>

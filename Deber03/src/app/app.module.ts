@@ -13,6 +13,9 @@ import {HttpClientModule} from '@angular/common/http'
 import {FormGroup,FormControl,Validators,ReactiveFormsModule} from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { EditarMascotaComponent } from './pantallas/editar-mascota/editar-mascota.component';
+import { CrearMascotaComponent } from './pantallas/crear-mascota/crear-mascota.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +26,8 @@ import { ToastrModule } from 'ngx-toastr';
     CrearComponent,
     LeerComponent,
     NoEncontradaComponent,
+    EditarMascotaComponent,
+    CrearMascotaComponent
   ],
   imports: [
     BrowserModule,

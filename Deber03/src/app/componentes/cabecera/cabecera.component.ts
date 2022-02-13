@@ -15,4 +15,16 @@ export class CabeceraComponent implements OnInit {
   salir(){
     this.router.navigate(["leer"]);
   }
+
+  crear(){
+    this.router.navigate(["crear"]);
+  }
+  crearMascota(){
+    this.router.navigate(["crearMascota"]);
+  }
+
+  ver(){
+    this.router.navigate(["leer"])
+  }
+
 }
