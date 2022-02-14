@@ -1,0 +1,34 @@
+<app-cabecera></app-cabecera>
+<div>
+
+  <form [formGroup]="nuevoFormRaza" (ngSubmit)="postForm(nuevoFormRaza.value)">
+    <div class="form-group">
+      <label for="txtnombre">Nombre</label>
+      <input type="text" class="form-control" id="txtnombre" placeholder="Nombre" formControlName="nombre">
+    </div>
+    <div class="form-group">
+      <label for="txtorigen">Origen</label>
+      <input type="text" class="form-control" id="txtorigen" placeholder="Origen" formControlName="origen">
+    </div>
+    <div class="form-group">
+      <label for="txtexistencia">Existencia</label>
+      <input type="text" class="form-control" id="txtexistencia" placeholder="Origen" formControlName="existencia">
+    </div>
+    <div class="form-group">
+      <label for="txttamano">Tamaño</label>
+      <input type="number" class="form-control" id="txttamano" placeholder="Tamaño" formControlName="tamano">
+    </div>
+    <div class="form-group">
+      <label for="txtpeso">Peso</label>
+      <input type="number" class="form-control" id="txtpeso" placeholder="Peso" formControlName="peso">
+    </div>
+    <br>
+    <div class="m-0 row justify-content-around">
+      <button type="submit" class="btn btn-primary  col-sm-2 border">Guardar</button>
+    </div>
+
+  </form>
+
+</div>
+<app-pie-pagina></app-pie-pagina>
+

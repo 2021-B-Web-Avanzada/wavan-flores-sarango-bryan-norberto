@@ -1,25 +1,42 @@
 <h1 [ngStyle]="{
-'background-color':'#000',
-'color':color,
-'border':'solid 1px'+color}" >Hola desde Banner</h1>
-<!-- interpolación> texto muestra interfaaz-->
-<h2>{{nombre}}-{{apellido}}</h2>
-<p>Mascota:{{mascotas.cachetes.edad}}</p>
+'background-color': '#000',
+'color': color,
+'border': 'solid 5px ' + color
+}">
+  HOLA DESDE BANNER
+</h1>
 
-<!--Property binding[]-->
-<img [src]="urlImagen" alt="">
-<a [href]="url">Mas información</a>
+<div class="row">
+  <div class="col-sm-6">
+    <img [src]="urlImagen" class="img-fluid" alt="">
+  </div>
+  <div class="col-sm-6">
+    <img [src]="urlImagen" class="img-fluid" alt="">
+  </div>
+  <div class="col-sm-6">
+    <img [src]="urlImagen" class="img-fluid" alt="">
+  </div>
+</div>
 
-<!--Event binding[]-->
-<button (click)="ejecutarEventoClic()"
-        (blur)="ejecutarEventoBlur()">
-  Event Binding</button>
+<!-- interpolación {{}} -> TEXTO MUESTRA INTERFAZ -->
+<h2>{{nombre}} - {{apellido}}</h2>
+<p>Mascota: {{mascotas.cachetes.edad}}</p>
+<!-- Property Binding [] -->
 
-<!--Pipes-->
-<!--Recibe algo y transforma-->
-<p>{{fecha | date: 'dd-MM-YYYY'}}</p>
+<a [href]="url" target="_blank">
+  Mas informacion
+</a>
+<!-- Event Binding [] -->
+<button (click)="ejecutarEventoClick()"
+        (blur)="ejecutarEventoBlur()"
+>
+  Event Binding
+</button>
+
+<!-- PIPES -->
+<!-- RECIBE ALGO -> TRANSFORMA  -->
+<p>{{fecha | date:'dd-MM-YYYY'}}</p>
 <p>{{sueldo | currency}}</p>
-
 <pre>
-  {{mascotas | json}}
+{{mascotas | json}}
 </pre>

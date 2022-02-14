@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ruta-login',
@@ -6,30 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ruta-login.component.scss']
 })
 export class RutaLoginComponent implements OnInit {
-  mostrarSegundoBanner=true;
 
-  arregloUsuarios =[
+  mostrarSegundoBanner = true;
+
+  arregloUsuarios = [
     {
-      id:1,
+      id: 1,
       nombre: 'Adrian',
       color: '#00BCFF',
-      link:'https://as01.epimg.net/meristation/imagenes/2021/09/23/noticias/1632428523_284348_1632437337_noticia_normal.jpg',
-      linkImagen:'https://mario.nintendo.com/static/908b49b78a35561f154527804283c517/slide-mpss-0.png'
+      link: 'https://es-la.facebook.com/',
+      linkImagen: 'https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg',
     },
     {
-      id:2,
-      nombre: 'Adrian',
-      color:'#0074FF',
-      link:'https://as01.epimg.net/meristation/imagenes/2021/09/23/noticias/1632428523_284348_1632437337_noticia_normal.jpg',
-      linkImagen:'https://mario.nintendo.com/static/908b49b78a35561f154527804283c517/slide-mpss-0.png'
+      id: 2,
+      nombre: 'Vicente',
+      color: '#a80c77',
+      link: 'https://www.epn.edu.ec/',
+      linkImagen: 'https://ilmaistro.com/wp-content/uploads/clipmagic-cambiar-fondo.jpg',
     }
   ]
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-  cambiarOcultarBanner(){
+
+  cambiarOcultarBanner() {
     this.mostrarSegundoBanner = !this.mostrarSegundoBanner;
   }
 

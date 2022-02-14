@@ -1,0 +1,45 @@
+<app-cabecera></app-cabecera>
+<div>
+  <form [formGroup]="editarFormRaza" (ngSubmit)="putForm(editarFormRaza.value)">
+    <div class="form-group">
+      <label for="txtID">ID</label>
+      <input type="text" class="form-control" id="txtID" placeholder="ID" formControlName="id"  readonly>
+    </div>
+    <div class="form-group">
+      <label for="txtnombre">Nombre</label>
+      <input type="text" class="form-control" id="txtnombre" placeholder="Nombre" formControlName="nombre">
+    </div>
+    <div class="form-group">
+      <label for="txtorigen">Origen</label>
+      <input type="text" class="form-control" id="txtorigen" placeholder="Origen" formControlName="origen">
+    </div>
+
+<!--    <div class="form-check">-->
+<!--      <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
+<!--      <label class="form-check-label" for="exampleCheck1" formControlName="existencia" >true</label>-->
+<!--    </div>-->
+
+    <div class="form-group">
+      <label for="txtexistencia">Existencia</label>
+      <input type="text" class="form-control" id="txtexistencia" placeholder="Origen" formControlName="existencia">
+    </div>
+
+    <div class="form-group">
+      <label for="txttamano">Tamaño</label>
+      <input type="number" class="form-control" id="txttamano" placeholder="Tamaño" formControlName="tamano">
+    </div>
+    <div class="form-group">
+      <label for="txtpeso">Peso</label>
+      <input type="number" class="form-control" id="txtpeso" placeholder="Peso" formControlName="peso">
+    </div>
+    <br><br>
+    <div class="m-0 row justify-content-around">
+      <button type="submit" class="btn btn-primary col-sm-2 border">Guardar</button>
+      <button type="button" class="btn btn-danger col-sm-2 border" (click)="eliminarRaza()">Eliminar</button>
+    </div>
+
+  </form>
+
+</div>
+<app-pie-pagina></app-pie-pagina>
+

@@ -5,11 +5,11 @@ import { BannerImagenesComponent } from './banner-imagenes/banner-imagenes.compo
 
 
 @NgModule({
-  declarations: [
+  declarations: [ // banner-imagenes.module.ts
     BannerImagenesComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     BannerImagenesComponent

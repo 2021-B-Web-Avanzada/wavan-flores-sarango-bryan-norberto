@@ -1,5 +1,4 @@
-import { Input } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-banner-imagenes',
@@ -7,38 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-imagenes.component.scss']
 })
 export class BannerImagenesComponent implements OnInit {
-  nombre='Bryan';
-  apellido='Flores';
-  mascotas={
-    cachetes:{
-      edad:7
+  nombre = 'Adrian';
+  apellido = 'Eguez'
+  mascotas = {
+    cachetes: {
+      edad: 7
     }
   }
-  fecha=new Date();
-  sueldo =1000;
-
-
+  fecha = new Date();
+  sueldo = 1000;
+  // banner-imagenes.component.ts
   @Input()
-  url='https://google.com';
+  url = 'https://www.google.com';
 
   @Input()
   urlImagen = 'https://1.bp.blogspot.com/-79DdxzZkDog/T76QV6v5IuI/AAAAAAAAAEY/6DzpGZzsmfA/s320/homerocatolico_456_336.jpg'
 
   @Input()
-  color= 'yellow'
+  color = 'yellow';
+
+
 
   constructor() {
-
   }
 
   ngOnInit(): void {
   }
 
-  ejecutarEventoClic(){
-    console.log({mensaje:'Click'});
+  ejecutarEventoClick(){
+    console.log({mensaje:'click'});
   }
   ejecutarEventoBlur(){
-    console.log({mensaje:'Blur'});
+    console.log({mensaje:'blur'});
   }
 
 }

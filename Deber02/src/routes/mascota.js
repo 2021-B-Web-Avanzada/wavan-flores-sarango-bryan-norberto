@@ -7,8 +7,35 @@ const fs = require('fs');
 
 //LEER
 router.get('/',(req,res)=>{
-    res.json(mascotas);
+    let mascotas2= [];
+    for(let i=0;i<mascotas.length;i++) {
+            for (let j = 0; j < mascotas[i]["children"].length; j++) {
+                var json = mascotas[i].children[j];
+                json.idPadre = mascotas[i].id;
+                mascotas2.push(json);
+            }
+    }
+
+    res.json(mascotas2);
 });
+
+//LEER por cada uno
+router.get('/:idParent&:idChildren',(req,res)=>{
+    const idParent=parseInt(req.params['idParent']);
+    const idChildren=parseInt(req.params['idChildren']);
+
+    for(let i=0;i<mascotas.length;i++) {
+        if (mascotas[i].id == idParent) {
+            for (let j = 0; j < mascotas[i]["children"].length; j++) {
+                if (mascotas[i].children[j].idChildren == idChildren) {
+                    res.json(mascotas[i].children[j]);
+                    break;
+                }
+            }
+        }
+    }
+});
+
 
 //INSERTAR
 router.post('/:idParent',(req,res)=>{
@@ -32,8 +59,7 @@ router.post('/:idParent',(req,res)=>{
                 break;
             }
         }
-        res.json(mascotas);
-        //res.json('guardado');
+        res.send("Insertado");
     }else{
         res.status(400).json({error:'Las entradas no pueden estar vacias'});
     }
@@ -54,7 +80,7 @@ router.delete('/:idParent&:idChildren',(req,res)=>{
                     mascotas[i].children=mascotas[i].children.filter(mascota=>mascota.idChildren!=idChildren);
                     const json_mascota= JSON.stringify(mascotas);
                     fs.writeFileSync('src/datos.json',json_mascota,'utf-8');
-                    res.send('borrado');
+                    res.send("Eliminada");
                 }
             }
         }
