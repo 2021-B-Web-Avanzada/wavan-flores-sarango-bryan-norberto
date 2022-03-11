@@ -1,0 +1,21 @@
+<div class="divfiltrar" *ngFor="let mensaje of listamen">
+  <h1>Mensaje</h1>
+
+
+
+  <div class="div2">
+    <h3>Id proyecto: {{mensaje.ID_PROYECTO}}  &nbsp; &nbsp; &nbsp;  Id propiedad: {{mensaje.ID_PROPIEDAD}}</h3>
+  </div>
+
+  <div class="div2">
+    <h3>Usuario: {{mensaje.NOMBRE_USUARIO}} &nbsp; &nbsp; &nbsp;  Telefono: {{mensaje.CELULAR_USUARIO}} &nbsp; &nbsp; &nbsp; Email: {{mensaje.EMAIL_USUARIO}}</h3>
+  </div>
+
+  <div class="div2" [ngStyle]="{'background-color':' white','border-radius':'5px'}">
+    <h3>Mensaje: {{mensaje.CONTENIDO_MENSAJE}}</h3>
+  </div>
+
+
+
+</div>
+

@@ -1,0 +1,29 @@
+.contenedor{
+  margin: 5%;
+  width: 90%;
+
+}
+.botoncd{
+  background-color: orangered;
+  border-radius: 25px;
+  text-align: center;
+  width: 25%;
+  color: black;
+}
+.contenedor1{
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  width: 45%;
+  margin-bottom: 4%;
+}
+
+.contenedor2{
+  width: 45%;
+  margin-bottom: 4%;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  height: 300px;
+}
+a{
+  text-decoration: none;
+}

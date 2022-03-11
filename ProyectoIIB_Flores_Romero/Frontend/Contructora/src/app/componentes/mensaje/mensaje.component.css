@@ -1,0 +1,21 @@
+.centrar{
+  margin:3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.centrarhijo{
+  border-radius: 15px;
+  border: solid black 2px;
+  background-color: lightgray;
+  align-items: center;
+  text-align: left;
+  width: 50%;
+  height: 100%;
+
+}
+.div3{
+  margin: 0.9%;
+  text-align: center;
+}

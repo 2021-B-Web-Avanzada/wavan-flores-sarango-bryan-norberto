@@ -1,0 +1,169 @@
+<div *ngIf="mostrarLogin">
+<app-login></app-login>
+</div>
+
+<div *ngIf="mostrarInicio">
+              <app-header></app-header>
+              <app-carrusel></app-carrusel>
+              <div>
+                <app-cuadrosinformativos></app-cuadrosinformativos>
+                <app-cuadrosinformativos2></app-cuadrosinformativos2>
+                <app-cuadrosinformativos></app-cuadrosinformativos>
+              </div>
+
+              <div [ngStyle]="{'width':'100%', 'text-align': 'center'}">
+                <h5>Mas</h5>
+              </div>
+              <div >
+                <app-footer></app-footer>
+              </div>
+</div>
+
+
+
+
+
+<div *ngIf="mostrarPropiedadIndividual">
+  <app-header></app-header>
+  <app-propiedad1
+
+    [listaImagenes]="listaimagenesPropiedad"
+  ></app-propiedad1>
+  <app-footer></app-footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="mostrarProyectos">
+                <app-header></app-header>
+  <app-mensaje *ngIf="contactar" [ngStyle]="{'position': 'fixed','z-index':'100','width':'100%' }"></app-mensaje>
+
+                <app-filtrar-proyectos></app-filtrar-proyectos>
+                <app-proyecto
+                  [listaProyectos]="listaProyectos"
+                ></app-proyecto>
+                <app-footer></app-footer>
+
+</div>
+
+
+
+<div *ngIf="mostrarMensajes">
+  <app-header></app-header>
+ <app-mensaje2
+ [listamen]="listaMensajes"
+ ></app-mensaje2>
+
+  <app-footer></app-footer>
+
+</div>
+
+
+
+
+<div *ngIf="mostrarPropiedades">
+                  <app-header></app-header>
+  <app-mensaje *ngIf="contactar" [ngStyle]="{'position': 'fixed','z-index':'100','width':'100%' }"></app-mensaje>
+                  <app-filtrar></app-filtrar>
+                  <app-propiedad
+                    [listaPropiedades]="listaPropiedades"></app-propiedad>
+                  <app-footer></app-footer>
+
+</div>
+
+
+<div *ngIf="mostrarNosotros">
+  <app-header></app-header>
+  <div>
+    <img src="{{urlImagenNostros}}" alt="" [ngStyle]="{'width':'100%','height':'500px'}">
+  </div>
+  <div class="centrar"  >
+    <h1>Mision</h1>
+    <p [ngStyle]="{'margin':'3%','margin-right':'15%','margin-left':'15%'}" >
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit At vero eos et
+      accusamus et iusto odio dignissimos At vero eos et accusamus et iusto odio At vero eos et accusamus
+      et iusto odio dignissimos. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+      At vero eos et accusamus et iusto odio dignissimos At vero eos et accusamus et iusto odio At
+      vero eos et accusamus et iusto odio dignissimos.Nam libero tempore, cum soluta nobis est eligendi
+      optio cumque nihil impedit At vero eos et accusamus et iusto odio dignissimos At vero eos et
+      accusamus et iusto odio At vero eos et accusamus et iusto odio dignissimos
+    </p>
+  </div>
+
+  <div class="centrar1"  >
+    <h1>Vision</h1>
+    <p [ngStyle]="{'margin':'3%','margin-right':'15%','margin-left':'15%'}" >
+      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit At vero eos et
+      accusamus et iusto odio dignissimos At vero eos et accusamus et iusto odio At vero eos et accusamus
+      et iusto odio dignissimos. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit
+      At vero eos et accusamus et iusto odio dignissimos At vero eos et accusamus et iusto odio At
+      vero eos et accusamus et iusto odio dignissimos.Nam libero tempore, cum soluta nobis est eligendi
+      optio cumque nihil impedit At vero eos et accusamus et iusto odio dignissimos At vero eos et
+      accusamus et iusto odio At vero eos et accusamus et iusto odio dignissimos
+    </p>
+  </div>
+
+
+  <div class="centrar"  >
+    <div [ngStyle]="{'width':'30%','margin':'3%'}">
+      <img src="{{urlIngeniero}}" alt="" [ngStyle]="{'float':'left','margin':'3%'}">
+    </div>
+    <div [ngStyle]="{'width':'70%','margin':'3%','margin-right':'25%','margin-left':'25%','align':'right'}">
+      <h1>Nuestro Gerente</h1>
+      <h1>Ingeniero Bryan Flores</h1>
+      <p>
+        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit At vero eos et
+        accusamus et iusto odio dignissimos At vero eos et accusamus et iusto odio At vero eos et accusamus
+        et iusto odio dignissimos. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.
+
+      </p>
+      <p>
+        At vero eos et accusamus et iusto odio dignissimos At vero eos et accusamus et iusto odio At
+        vero eos et accusamus et iusto odio dignissimos.Nam libero tempore, cum soluta nobis est eligendi
+        optio cumque nihil impedit At vero eos et accusamus et iusto odio dignissimos At vero eos et
+        accusamus et iusto odio At vero eos et accusamus et iusto odio dignissimos
+      </p>
+      <p>
+        Nam libero tempore, cum soluta nobis est eligendi
+        optio cumque nihil impedit At vero eos et accusamus et iusto odio dignissimos At vero eos et
+        accusamus et iusto odio At vero eos et accusamus et iusto odio dignissimos
+      </p>
+    </div>
+
+  </div>
+
+
+
+  <app-footer></app-footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
