@@ -1,0 +1,32 @@
+.login{
+  align-content: center;
+  text-align: center;
+  margin: 5%;
+}
+.login h1{
+  margin: 5%;
+}
+.login h3{
+  margin: 1%;
+}
+.login input{
+  margin: 1%;
+}
+
+.div3{
+  margin: 0.4%;
+  align-content: center;
+  text-align: center;
+}
+button{
+  border: darkblue;
+  color: white;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+}
+h4{
+  font-size: smaller;
+}
+h5{
+  font-size: smaller;
+}

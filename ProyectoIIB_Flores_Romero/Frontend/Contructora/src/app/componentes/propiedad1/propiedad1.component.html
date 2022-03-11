@@ -1,0 +1,21 @@
+<h1 [ngStyle]="{'text-align': 'center'}">{{propiedad.NOMBRE_PROP}}</h1>
+<img src="{{listaImagenes[0]}}" alt="" [ngStyle]="{'width':'100%','height':'500px'}">
+<img src="{{listaImagenes[1]}}" alt="" [ngStyle]="{'width':'32%','margin':'0.6%'}">
+<img src="{{listaImagenes[2]}}" alt="" [ngStyle]="{'width':'32%','margin':'0.6%'}">
+<img src="{{listaImagenes[3]}}" alt="" [ngStyle]="{'width':'32%','margin':'0.6%'}">
+<div>
+<div class="carac" [ngStyle]="{'width':'13%','margin-top':'80px','height': '300px'}">
+  <h1>Caracteristicas</h1>
+  <h4>Ciudad: {{propiedad.UBICACION_PROY}}</h4>
+  <h4>Habitaciones: {{propiedad.NUMERO_HABITACIONES_PROP}}</h4>
+  <h4>Estacionamientos: {{propiedad.NUMERO_ESTACIONAMIENTOS_PROP}}</h4>
+  <h4>Baños: {{propiedad.NUMERO_BANOS_PROP}}</h4>
+  <h4>Precio: {{propiedad.PRECIO_PROP}}</h4>
+  <h4>Area: {{propiedad.DIMENSION_TOTAL_PRO}} m2</h4>
+</div>
+<div class="men" [ngStyle]="{'width':'70%','margin-top':'50px','height': '300px'}">
+  <app-mensaje [ngStyle]="{'width':'100%'}"></app-mensaje>
+</div>
+</div>
+<h1 [ngStyle]="{'text-align': 'center','color':'white'}">.</h1>
+<img src="{{propiedad.PLANO_PROP}}" alt="" [ngStyle]="{'align-content': 'center','width':'60%','margin-left':'20%','margin-right':'20%','margin-top':'40px','margin-bottom':'40px'}">

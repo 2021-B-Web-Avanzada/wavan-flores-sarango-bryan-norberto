@@ -1,0 +1,17 @@
+.centrar{
+  margin: 3%;
+  align-content: center;
+  text-align: center;
+  border: solid black 1px;
+}
+
+.imagen{
+  margin: 3%;
+  align-content: center;
+  text-align: center;
+
+}
+.mostrarmensaje{
+position: center ;
+
+}

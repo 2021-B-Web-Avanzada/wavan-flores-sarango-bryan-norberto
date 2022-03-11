@@ -1,0 +1,55 @@
+<div class="divfiltrar">
+  <h1>Filtrar</h1>
+  <div class="div2">
+    <label for="ciudad"
+           class="form-label">
+      Ciudad:&nbsp;
+    </label>
+    <input type="text"
+           [(ngModel)]="ciudad"
+           id="ciudad">
+
+  </div>
+  <div class="div2">
+    <label for="habitaciones"
+           class="form-label">
+      Habitaciones  &nbsp; mayor a:&nbsp;
+    </label>
+    <input type="text"
+           [(ngModel)]="habMenor"
+           id="habitaciones">
+
+    <label for="habitaciones1"
+           class="form-label">
+      &nbsp; menor a:&nbsp;
+    </label>
+    <input type="text"
+           [(ngModel)]="habMayor"
+           id="habitaciones1">
+
+  </div>
+  <div class="div2">
+    <label for="Precio"
+           class="form-label">
+      Precio  &nbsp; mayor a:&nbsp;
+    </label>
+    <input type="text"
+           [(ngModel)]="precioMenor"
+           id="Precio">
+
+    <label for="Precio1"
+           class="form-label">
+      &nbsp; menor a:&nbsp;
+    </label>
+    <input type="text"
+           [(ngModel)]="precioMayor"
+           id="Precio1">
+
+  </div>
+
+
+  <div class="d-grip gap-2" class="div3" >
+    <button (click)="buscarPropiedades()" class="btn btn-primary btn-block" [ngStyle]="{'width':'15%'}"
+    >Buscar</button>
+  </div>
+</div>

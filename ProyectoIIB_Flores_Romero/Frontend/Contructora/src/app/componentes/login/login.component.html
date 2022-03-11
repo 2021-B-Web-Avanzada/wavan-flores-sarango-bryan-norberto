@@ -1,0 +1,29 @@
+<div class="login">
+  <h1>Constructora</h1>
+
+  <div>
+    <h3>Ingresar usuario</h3>
+    <input type="text"
+           [(ngModel)]="nombreDeUsuario"
+           id="email">
+
+  </div>
+  <div>
+    <h3>Ingresar contraseña</h3>
+    <input type="password"
+           [(ngModel)]="contrasena"
+           id="contrasenia">
+
+  </div>
+
+  <div  class="div3" >
+    <button (click)="validadusuario(nombreDeUsuario,contrasena)" [ngStyle]="{'width':'15%'}"
+    >Ingresar</button>
+  </div>
+  <h4>No tienes una cuenta?</h4>
+  <h5>registrate</h5>
+
+</div>
+
+
+

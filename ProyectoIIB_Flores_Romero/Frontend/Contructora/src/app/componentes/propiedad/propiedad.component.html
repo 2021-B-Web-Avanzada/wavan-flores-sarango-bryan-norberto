@@ -1,0 +1,16 @@
+<div class=" centrar"  *ngFor="let propiedad of listaPropiedades">
+  <div class="row">
+    <div class="col-4"  (click)="mostrarPropiedadIndividual(propiedad.ID_PROYECTO, propiedad.ID_PROPIEDAD)">
+      <img class="imagen" src="{{propiedad.PLANO_PROP}}" [ngStyle]="{'width':'100%'}" alt="Card image cap">
+    </div>
+    <div class="card-body col-4">
+      <h5 class="card-title">{{propiedad.NOMBRE_PROP}}</h5>
+      <p class="card-text">Ciudad:{{propiedad.UBICACION_PROY}}</p>
+      <p class="card-text">Habitaciones:{{propiedad.NUMERO_HABITACIONES_PROP}}</p>
+      <p class="card-text">Precio:{{propiedad.PRECIO_PROP}}$</p>
+      <p class="card-text">Tipo de propiedad:{{propiedad.TIPO_PROP}}</p>
+      <button (click)="contactar(propiedad.ID_PROYECTO, propiedad.ID_PROPIEDAD)" class="btn btn-danger custom-radio"> Contactar</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="centrar">
+  <div class="centrarhijo">
+    <div class="d-grip gap-2" class="div3" >
+      <button (click)="cancelar()" class="btn btn-primary btn-block" [ngStyle]="{'width':'15%'}"
+        >Volver</button>
+    </div>
+    <label for="mensaje"
+           class="form-label">
+      &nbsp; Mensaje&nbsp;
+    </label>
+    <input
+      [(ngModel)]="mensaje"
+      type="text" [ngStyle]="{'width':'100%','height':'54%'}"
+      id="mensaje">
+
+    <div class="d-grip gap-2" class="div3" >
+      <button (click)="enviarMensajeProyecto()" class="btn btn-primary btn-block" [ngStyle]="{'width':'15%'}"
+      >Aceptar</button>
+    </div>
+
+  </div>
+
+</div>

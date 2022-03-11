@@ -1,0 +1,15 @@
+<div class=" centrar"  *ngFor="let proyecto of listaProyectos" >
+  <div class="row">
+    <div class="col-4" >
+      <img class="imagen" src="{{proyecto.PLANO_PROY}}" [ngStyle]="{'width':'100%'}" alt="Card image cap">
+    </div>
+    <div class="card-body col-4">
+      <h5 class="card-title">{{proyecto.NOMBRE_PROY}}</h5>
+      <p class="card-text">Ciudad:{{proyecto.UBICACION_PROY}}</p>
+      <p class="card-text">Servicios:{{proyecto.SERVICIOS_PROY}}</p>
+      <button (click)="contactar(proyecto.ID_PROYECTO)" class="btn btn-danger custom-radio"> Contactar</button>
+    </div>
+  </div>
+</div>
+
+<!--<app-mensaje *ngIf="contactar" [ngStyle]="{'position': 'fixed','z-index':'100'}"></app-mensaje>-->
